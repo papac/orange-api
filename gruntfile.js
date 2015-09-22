@@ -54,14 +54,26 @@ module.exports = function (grunt) {
                     reporter: "spec",
                     timeout: "10000"
                 },
-                src: ["test/common/db_helper.js", "test/common/*.js", "test/*.js", "test/*/common.js", "test/**/*.js"]
+                src: [
+                    "test/common/db_helper.js",
+                    "test/common/*.js",
+                    "test/*.js",
+                    "test/*/common.js",
+                    "test/**/*.js"
+                ]
             },
             unit: {
                 options: {
                     reporter: "spec",
                     timeout: "10000"
                 },
-                src: ["test/common/db_helper.js", "test/common/*.js", "test/*/common.js", "test/*/unit/*.js", "test/*/unit/**/*.js"]
+                src: [
+                    "test/common/db_helper.js",
+                    "test/common/*.js",
+                    "test/*/common.js",
+                    "test/*/unit/*.js",
+                    "test/*/unit/**/*.js"
+                ]
             }
         },
 

@@ -146,8 +146,8 @@ will be shown.
     + `invalid_offset` (400) - the specified result offset is invalid
     + `invalid_sort_by` (400) - the specified sort field is invalid
     + `invalid_sort_order` (400) - the specified sort order is invalid
-    + `invalid_start_date` (400) - the specified start date is an invalid ISO 8601 datetime
-    + `invalid_end_date` (400) - the specified end date is an invalid ISO 8601 datetime
+    + `invalid_start` (400) - the specified start date is an invalid ISO 8601 datetime
+    + `invalid_end` (400) - the specified end date is an invalid ISO 8601 datetime
     + `invalid_medication_id` (400) - the medication ID specified to sort by is invalid
 
     + Body
