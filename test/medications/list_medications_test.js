@@ -46,9 +46,6 @@ describe("Medications", function () {
                         patient = p;
                         return patients.createMyPatient({}, user).then(function (p) {
                             otherPatient = p;
-                            return patients.createMyPatient({}, user).then(function (p) {
-                                badPatient = p;
-                            });
                         });
                     });
                 });
@@ -99,11 +96,6 @@ describe("Medications", function () {
                 return listPatient(patient).then(function (response) {
                     expect(response.body.count).to.equal(40);
                 });
-            });
-
-            it("rejects patient IDs not corresponding to real patients", function () {
-                badPatient._id = 99999;
-                return expect(listPatient(badPatient)).to.be.an.api.error(404, "invalid_patient_id");
             });
 
             describe("with limit parameter", function () {

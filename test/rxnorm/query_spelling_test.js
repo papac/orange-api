@@ -16,6 +16,12 @@ describe("RXNorm", function () {
             return expect(query({})).to.be.an.rxnorm.spellingSuccess;
         });
 
+        it("gracefully handles bad data POSTed", function () {
+            return expect(query({
+                foo: "allegrad"
+            })).to.be.an.rxnorm.spellingSuccess;
+        });
+
         it("handles no medname specified", function () {
             return expect(query({
                 medname: ""
