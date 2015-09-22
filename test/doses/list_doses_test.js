@@ -51,7 +51,7 @@ describe("Doses", function () {
 
         describe("with test doses set up", function () {
             // setup two patients
-            var patient, otherPatient, badPatient;
+            var patient, otherPatient;
             before(function () {
                 return auth.createTestUser().then(function (user) {
                     return patients.createMyPatient({}, user).then(function (p) {

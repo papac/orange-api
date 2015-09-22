@@ -39,7 +39,7 @@ describe("Medications", function () {
 
         describe("with test medications set up", function () {
             // setup two patients
-            var patient, otherPatient, badPatient;
+            var patient, otherPatient;
             before(function () {
                 return auth.createTestUser().then(function (user) {
                     return patients.createMyPatient({}, user).then(function (p) {

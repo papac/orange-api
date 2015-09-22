@@ -82,6 +82,26 @@ describe("Patients", function () {
                 });
             });
 
+            // setup test medication we have access to (regularly scheduled)
+            before(function () {
+                return Q.nbind(patient.createMedication, patient)({
+                    name: "test medication regular",
+                    schedule: {
+                    as_needed: false,
+                    regularly: true,
+                    until: { type: "forever" },
+                    frequency: { n: 1, unit: "day" },
+                    times: [
+                        { type: "exact", time: "09:00 am" },
+                        { type: "exact", time: "10:00 am" }
+                    ],
+                    take_with_food: null,
+                    take_with_medications: [],
+                    take_without_medications: []
+                }
+                });
+            });
+
             // setup test medication we have no access to
             var hiddenMed;
             before(function () {
